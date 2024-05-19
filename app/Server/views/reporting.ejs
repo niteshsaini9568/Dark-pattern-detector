@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Awareness</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-l from-white to-gray-100">
+    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-md px-4 py-8 z-50">
+        <nav class="flex justify-between items-center z-50">
+            <div class="flex items-center">
+                <img src='/Logo.png'  alt="Logo" class="h-8 mr-2">
+                <h3 class="text-lg font-semibold">Dark Patterns Detector</h3>
+            </div>
+            <div class="lg:hidden"> <!-- Show only on small screens -->
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="black" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </button>
+            </div>
+            <ul class="flex space-x-4 hidden lg:flex"> <!-- Hide on small screens -->
+                <li><a href="https://en.wikipedia.org/wiki/Data_breach"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Data-breach
+                        ?</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Dark_pattern"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Dark-pattern
+                        ?</a></li>
+                <li><a href="http://localhost:8080/rating"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Rating</a>
+                </li>
+                <li><a onclick="window.location.href='/Consumer_Handbook.pdf'"
+                        class="bg-purple-800 text-white px-3 py-3 rounded-full">Consumer Handbook</a></li>
+                <li><a href="https://consumerhelpline.gov.in/"
+                        class="bg-red-400 text-white px-3 py-3 rounded-full">Report</a></li>
+            </ul>
+        </nav>
+        <div id="sidebar" class="hidden lg:hidden fixed top-0 left-0 h-full w-64 bg-gray-200 shadow-md">
+            <ul class="pt-20">
+                <li class="mb-4">
+                    <a href="https://en.wikipedia.org/wiki/Data_breach"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Data-breach ?</a>
+                </li>
+                <li class="mb-4">
+                    <a href="https://en.wikipedia.org/wiki/Dark_pattern"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Dark-pattern ?</a>
+                </li>
+                <li class="mb-4">
+                    <a href="http://localhost:8080/rating"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Rating</a>
+                </li>
+                <li class="mb-4">
+                    <a onclick="window.location.href='/Consumer_Handbook.pdf'"
+                        class="block bg-purple-800 text-white px-3 py-3">Consumer Handbook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="https://consumerhelpline.gov.in/"
+                        class="block bg-red-400 text-white px-3 py-3">Report</a>
+                </li>
+            </ul>
+            <button id="close-sidebar" class="absolute top-4 right-4 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ff0000" d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"/></svg>
+            </button>
+        </div>
+    </header>
+    <main class="mt-24 px-12">
+        <div class="container mx-auto p-4">
+            <h1 class="text-2xl font-bold mb-4 text-center">How to File a Complaint Against an E-commerce Website</h1>
+            <ol class="list-decimal ml-6">
+                <p class="mb-4">
+                    E-commerce fraud poses a significant challenge, with fraudulent transactions, counterfeit products, and seller scams prevalent in online marketplaces. To address this, governments worldwide are implementing measures to protect consumers and regulate e-commerce platforms. These measures include proposed rules to hold e-commerce platforms accountable for seller fraud, integrated grievance redressal mechanisms, and collaboration with financial institutions to prevent online financial fraud.
+                    Prevention strategies include constant monitoring for fraudulent activity  and the employment of automated fraud prevention tools. Additionally, consumers are advised to verify seller credentials, use secure payment methods, and report suspicious transactions promptly to the relevant authorities.
+                    Governments play a crucial role in safeguarding consumers from e-commerce fraud by enacting regulations, establishing redressal mechanisms, and fostering collaboration between stakeholders. These efforts aim to promote trust in online transactions and ensure a secure environment for e-commerce growth.
+                </p>
+                <li class="mb-4">
+                    Visit the e-commerce website's "Contact Us" page and look for information on how to file a complaint. 
+                </li>
+                <li class="mb-4">
+                    If you can't find relevant information, check the website's terms and conditions or FAQ section for guidance.
+                </li>
+                <li class="mb-4">
+                    Contact the website's customer support via email or phone. Make sure to keep records of all communication.
+                </li>
+                <li class="mb-4">
+                    If your complaint is not resolved, escalate it by reaching out to the designated grievance officer mentioned on the website. [[4](https://consumerhelpline.gov.in/faq-details.php?fid=E-Commerce)]
+                </li>
+                <li class="mb-4">
+                    If the issue remains unresolved, you can file a formal complaint with the appropriate consumer protection agency in your country.
+                </li>
+                <li class="mb-4">
+                    Provide detailed information about your complaint, including order numbers, dates, and screenshots if applicable.
+                </li>
+                <li class="mb-4">
+                    Be persistent and follow up regularly until the issue is resolved to your satisfaction.
+                </li>
+            </ol>
+            <a href="https://youtu.be/x1-huVZH5Ro?si=BC-TyQTC_tcyHU53" class="rounded-full inline bg-purple-800 text-white px-3 py-3" target="_blank">Video</a>
+            <a href="https://services.india.gov.in/service/detail/lodge-complaint-online-with-national-consumer-helpline-portal-1" class="rounded-full inline bg-red-400 text-white px-3 py-3">Know More..</a>
+        </div>
+        
+        <section class="container mx-auto mb-8 px-4 ">
+            <h1 class="text-4xl font-semibold text-center mb-8">Consumer Rights</h1>
+            <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Right to safety</h3>
+                    <p class="text-gray-700">Means right to be protected against the marketing of goods and services, which are hazardous to life and property. The purchased goods and services availed of should not only meet their immediate needs, but also fulfil long term interests. Before purchasing, consumers should insist on the quality of the products as well as on the guarantee of the products and services. They should preferably purchase quality marked products such as ISI,AGMARK, etc</p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Right to choose</h3>
+                    <p class="text-gray-700">Means right to be assured, wherever possible of access to variety of goods and services at competitive price. In case of monopolies, it means right to be assured of satisfactory quality and service at a fair price. It also includes right to basic goods and services. This is because unrestricted right of the minority to choose can mean a denial for the majority of its fair share. This right can be better exercised in a competitive market where a variety of goods are available at competitive prices</p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Right to be informed</h3>
+                    <p class="text-gray-700">Means right to be informed about the quality, quantity, potency, purity, standard and price of goods so as to protect the consumer against unfair trade practices. Consumer should insist on getting all the information about the product or service before making a choice or a decision. This will enable him to act wisely and responsibly and also enable him to desist from falling prey to high pressure selling techniques.</p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Right to consumer education</h3>
+                    <p class="text-gray-700">Means the right to acquire the knowledge and skill to be an informed consumer throughout life. Ignorance of consumers, particularly of rural consumers, is mainly responsible for their exploitation. They should know their rights and must exercise them. Only then real consumer protection can be achieved with success.</p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Right to be heard and understood</h3>
+                    <p class="text-gray-700">Means that consumer's interests will receive due consideration at appropriate forums. It also includes right to be represented in various forums formed to consider the consumer's welfare. The Consumers should form non-political and non-commercial consumer organizations which can be given representation in various committees formed by the Government and other bodies in matters relating to consumers.</p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Right to Seek redressal</h3>
+                    <p class="text-gray-700">Means right to seek redressal against unfair trade practices or unscrupulous exploitation of consumers. It also includes right to fair settlement of the genuine grievances of the consumer. Consumers must make complaint for their genuine grievances.Many a times their complaint may be of small value but its impact on the society as a whole may be very large. They can also take the help of consumer organisations in seeking redressal of their grievances.</p>
+                </li>
+                <!-- Add other list items here -->
+            </ul>
+        </section>
+        <section class="container mx-auto mb-8 px-4 my-32">
+            <h1 class="text-4xl font-semibold text-center mb-8">Consumer Protection Act</h1>
+            <p class="text-gray-700">An Act to provide for protection of the interests of consumers and for the said purpose, to establish authorities for timely and effective administration and
+                settlement of consumers' disputes and for matters connected connected therewith.” (According to Consumer Protection Act, 2019).
+                “An Act to provide for better protection of the interests of consumers and for that purpose to make provision for the establishment of consumer councils and other authorities for the settlement of consumers' disputes and for matters connected therewith.”(According to Consumer Protection Act, 1986).
+                Consumer Protection Act, 1986 seeks to promote and protect the interest of consumers against deficiencies and defects in goods or services. It also seeks to secure the rights of a consumer against unfair or restrictive trade practices. This act was passed in Lok Sabha on 9th December,1986 and Rajya Sabha on 10th December, 1986 and assented by the President of India on 24th December, 1986 and was published in the Gazette of India on 26th December, 1986.
+            </p>
+        </section>
+        <section class="container mx-auto mb-8 px-4 my-32">
+            <h1 class="text-4xl font-semibold text-center mb-8">Consumer Responsibilities</h1>
+            <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Ask Yourself!</h3>
+                    <p class="text-gray-700"><ul>
+                        <li>Have you faced any problems as a consumer?</li>
+                        <li>Have you ever complained when you have had such a problem?</li>
+                        <li>Do you know that you could seek the assistance of a consumer group to protect your interests?
+                        </li>
+                    </ul></p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Be Critically Aware</h3>
+                    <p class="text-gray-700">The responsibility to be more alert and to question more – about prices, about quantity and quality of goods bought and services used.
+                    </p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Be Involved</h3>
+                    <p class="text-gray-700">The responsibility to be assertive – to ensure that you get a fair deal as a consumer. Remember, if you are passive, you are likely to be exploited.
+                    </p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Be Organized</h3>
+                    <p class="text-gray-700">The responsibility to join hands and raise voices as consumers; to fight in a collective and to develop the strength and influence to promote and protect consumer interest.
+                    </p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Practice Sustainable Consumption</h3>
+                    <p class="text-gray-700">The responsibility to be aware of the impact of your consumption on other citizens, especially the disadvantaged or powerless groups; and to consume based on needs – not wants.
+                    </p>
+                </li>
+                <li class="bg-white rounded-lg shadow-md p-6 z-10">
+                    <h3 class="text-lg font-semibold mb-4">Be Responsible to the Environment</h3>
+                    <p class="text-gray-700">The responsibility to be aware and to understand the environmental consequences of our consumption. We should recognize our individual and social responsibility to conserve natural resources and protect the earth for future generations.
+                    </p>
+                </li>
+                <!-- Add other list items here -->
+            </ul>
+        </section>
+        <!-- Add other sections here -->
+
+        <section class="container mx-auto mb-8 px-4 my-32">
+            <h1 class="text-4xl font-semibold text-center mb-8">Jago Grahak Jago</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <img src="jago-grahak gago.jpg" alt="Jago Grahak Jago" class="w-full h-auto z-10">
+                <img src="misleading-ad.jpg" alt="Misleading Ad" class="w-full h-auto z-10">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-purple-900 text-white text-center py-4">
+        <p>© 2024 Dark Patterns Detector. All rights reserved</p>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        });
+
+        document.getElementById('close-sidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
+

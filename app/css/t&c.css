@@ -1,0 +1,96 @@
+.Extensio121_container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for Extensio121_card */
+.Extensio121_card {
+    width: 80%;
+    max-width: calc(100% - 4rem);
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    overflow: auto;
+    margin: auto;
+}
+
+/* Styles for Extensio121_heading */
+.Extensio121_heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Styles for Extensio121_highlightSection */
+.Extensio121_highlightSection {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 95%;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+/* Styles for Extensio121_summarySection */
+.Extensio121_summarySection {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 95%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+/* Styles for Extensio121_highlightHeading */
+.Extensio121_highlightHeading {
+    color: #f56e00;
+}
+
+/* Styles for Extensio121_summaryHeading */
+.Extensio121_summaryHeading {
+    color: #f56e00;
+}
+
+/* Styles for Extensio121_optionsContainer */
+.Extensio121_optionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Styles for Extensio121_dropdown */
+.Extensio121_dropdown {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+/* Styles for Extensio121_closeButton */
+.Extensio121_closeButton {
+    background: linear-gradient(to right, #f56e00, #ff0000);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 20px;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.Extensio121_closeButton:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

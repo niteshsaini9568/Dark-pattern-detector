@@ -1,0 +1,141 @@
+*{
+    z-index: 100;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 40
+  }
+  .material-symbols-outlined{
+      color: white;
+  }
+
+.maindiv {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #060363 74%);
+    height: 60px !important ;
+    width: 60px !important;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.styles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 50px !important;
+    width: 50px !important;
+    margin-right : 5px;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    visibility: hidden;
+    border: 1.8px solid #8e8e8e;
+
+}
+
+
+.styles:hover{
+    box-shadow: rgba(0, 0, 0, 0.85) 0px 14px 28px, rgba(0, 0, 0, 0.52) 0px 10px 10px;
+}
+
+.styles::before {
+    content: "";
+    position: absolute;
+    right: 80px;
+    background-color:#ffffff ;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+    height: 35px;
+    width: 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    /* transition: all 0.3s ease-in-out; */
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.styles:hover::before {
+    width: 180px;
+}
+
+.two{
+    bottom: 80px;
+    background-color: #ff1a1a;
+background-image: linear-gradient(315deg, #ff1a1a 0%, #ffff00 74%);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 0 4px 2px rgba(0,0,0,0.09), 0 8px 4px rgba(0,0,0,0.09), 0 16px 8px rgba(0,0,0,0.09), 0 32px 16px rgba(0,0,0,0.09);
+}
+
+.two:hover::before {
+    content: "Highlight";
+}
+
+.three{
+    bottom: 160px;
+    background-color: #0d0a0b;
+background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+}
+
+.three:hover::before {
+    width: 220px;
+    content: "Statics";
+}
+.four{
+    bottom: 240px;
+    background-color: #f8002f;
+background-image: linear-gradient(326deg, #f8002f 0%, #000c14 74%);
+}
+.four:hover::before {
+    width: 330px;
+    content: "Terms & Condition Summarizer";
+}
+.five{
+    bottom: 320px;
+    background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+
+.five:hover::before {
+    content: "Data-Breach";
+}
+.six{
+    bottom: 400px;
+    background-color: #166d3b;
+background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+}
+
+.six:hover::before {
+    content: "Report";
+}
+
+.seven{
+    bottom: 480px;
+    background-color: #923cb5;
+background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+}
+.seven:hover::before {
+    content: "Consultation";
+}

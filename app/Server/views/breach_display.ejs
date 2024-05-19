@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Breach Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-md px-4 py-8">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center">
+                <img src='/Logo.png'  alt="Logo" class="h-8 mr-2">
+                <h3 class="text-lg font-semibold">Dark Patterns Detector</h3>
+            </div>
+            <div class="lg:hidden"> <!-- Show only on small screens -->
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="black" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </button>
+            </div>
+            <ul class="flex space-x-4 hidden lg:flex"> <!-- Hide on small screens -->
+                <li><a href="https://en.wikipedia.org/wiki/Data_breach"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Data-breach
+                        ?</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Dark_pattern"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Dark-pattern
+                        ?</a></li>
+                <li><a href="http://localhost:8080/reporting" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-3 rounded-full">Reporting</a></li>             
+              <li><a onclick="window.location.href='/Documentation.pdf'" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-3 rounded-full">Documentation</a></li>
+            </ul>
+        </nav>
+        <div id="sidebar" class="hidden lg:hidden fixed top-0 left-0 h-full w-64 bg-gray-200 shadow-md">
+            <ul class="pt-20">
+                <li class="mb-4">
+                    <a href="https://en.wikipedia.org/wiki/Data_breach"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Data-breach ?</a>
+                </li>
+                <li class="mb-4">
+                    <a href="https://en.wikipedia.org/wiki/Dark_pattern"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Dark-pattern ?</a>
+                </li>
+                <li><a href="http://localhost:8080/reporting" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-2 mb-4 block">Reporting</a></li>             
+              <li><a onclick="window.location.href='/Documentation.pdf'" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-2 block">Documentation</a></li>
+            </ul>
+            <button id="close-sidebar" class="absolute top-4 right-4 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ff0000" d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"/></svg>
+            </button>
+        </div>
+    </header>
+    <section class="container mx-auto my-32 text-center">
+        <h1 class="text-4xl font-semibold text-center mb-8">Data Breach Information</h1>
+        <% if (result.message == 'Success.') { %>
+            <% if (result.data.length === 0) { %>
+                <h1 class="text-purple-800 text-4xl">Congratulations, your data is not breached.</h1>
+            <% } else if (result.data.length != 0) { %>
+                <h2 class="text-red-600 text-4xl">Your security has been compromised. Here are some details:</h2>
+                <% for(var i = 0; i < result.data.length; i++){%>
+                    <div class="bg-white shadow-md p-6 rounded-lg mt-8">
+                        <h3 class="text-lg font-semibold mb-4">Your Added data date = <%= result.data[i].AddedDate %></h3>
+                        <h3 class="text-lg font-semibold mb-4">Your Breached data date = <%= result.data[i].BreachDate %></h3>
+                        <h3 class="text-lg font-semibold mb-4">Your Information leaked:</h3>
+                        <ul>
+                            <% for(var j = 0; j < result.data[i].DataClasses.length; j++){%>
+                                <li><%= result.data[i].DataClasses[j] %></li>
+                            <%} %>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-4">Discription : <%= result.data[i].Description %></h3>
+                        <h3 class="text-lg font-semibold mb-4">Domain : <%= result.data[i].Domain %></h3>
+                        <h3 class="text-lg font-semibold mb-4">Is fabricated : <%= result.data[i].IsFabricated %></h3>
+                        <h3 class="text-lg font-semibold mb-4">IsMalware : <%= result.data[i].IsMalware %></h3>
+                        <h3 class="text-lg font-semibold mb-4">IsRetired : <%= result.data[i].IsRetired %></h3>
+                        <h3 class="text-lg font-semibold mb-4">IsSensitive : <%= result.data[i].IsSensitive %></h3>
+                        <h3 class="text-lg font-semibold mb-4">LogoPath : <%= result.data[i].LogoPath %></h3>
+                        <h3 class="text-lg font-semibold mb-4">Name : <%= result.data[i].Name %></h3>
+                        <h3 class="text-lg font-semibold mb-4">Title : <%= result.data[i].Title %></h3>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <h1 class="text-red-600  text-4xl">Something went wrong. Please try again later.</h1>
+            <% } %>
+        <% } else if (result.message == 'You have exceeded the DAILY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/vaibhavchandra2007/api/data-breach-checker') { %>
+            <p class="text-red-600  text-4xl">You have exceeded the DAILY quota for Requests on your current plan, BASIC. Upgrade your plan at <a href="https://rapidapi.com/vaibhavchandra2007/api/data-breach-checker" class="text-red-600 hover:underline">here</a>.</p>
+        <% } else { %>
+            <h1 class="text-red-600  text-4xl">Something went wrong. Please try again later.</h1>
+        <% } %>
+    </section>
+    <footer class="bg-purple-800 text-white text-center py-4">
+        <p>© 2024 Dark Patterns Detector. All rights reserved</p>
+     </footer>
+     <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        });
+
+        document.getElementById('close-sidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

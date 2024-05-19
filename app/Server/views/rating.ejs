@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Breach</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans">
+    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-md px-4 py-8">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center">
+                <img src='/Logo.png'  alt="Logo" class="h-8 mr-2">
+                <h3 class="text-lg font-semibold">Dark Patterns Detector</h3>
+            </div>
+            <div class="lg:hidden"> <!-- Show only on small screens -->
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="black" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </button>
+            </div>
+            <ul class="flex space-x-4 hidden lg:flex"> <!-- Hide on small screens -->
+                <li><a href="https://en.wikipedia.org/wiki/Data_breach"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Data-breach
+                        ?</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Dark_pattern"
+                        class="text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3 rounded-full">Dark-pattern
+                        ?</a></li>
+                <li><a href="http://localhost:8080/reporting" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-3 rounded-full">Reporting</a></li>             
+              <li><a onclick="window.location.href='/Documentation.pdf'" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-3 rounded-full">Documentation</a></li>
+            </ul>
+        </nav>
+        <div id="sidebar" class="hidden lg:hidden fixed top-0 left-0 h-full w-64 bg-gray-200 shadow-md">
+            <ul class="pt-20">
+                <li class="mb-4">
+                    <a href="https://en.wikipedia.org/wiki/Data_breach"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Data-breach ?</a>
+                </li>
+                <li class="mb-4">
+                    <a href="https://en.wikipedia.org/wiki/Dark_pattern"
+                        class="block text-purple-800 hover:text-white hover:bg-purple-800 px-3 py-3">Dark-pattern ?</a>
+                </li>
+                <li><a href="http://localhost:8080/reporting" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-2 mb-4 block">Reporting</a></li>             
+              <li><a onclick="window.location.href='/Documentation.pdf'" class="text-purple-800 hover:text-white hover:bg-purple-800 px-4 py-2 block">Documentation</a></li>
+            </ul>
+            <button id="close-sidebar" class="absolute top-4 right-4 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#ff0000" d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"/></svg>
+            </button>
+        </div>
+    </header>
+    <section class="section-1 mx-auto px-auto py-8 ">
+
+        <form method="POST" action="/rating" class="max-w-4xl mx-auto px-auto my-32 ">
+            <h1 class="text-3xl font-semibold text-center mb-8">We welcome your <span class="text-purple-600">feedback</span></h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto pl-16">
+                <div class="personal-info">
+                    <h2 class="text-xl font-semibold mb-4">Provide your details in the Form.</h2>
+                    <!-- Name Input Field -->
+                    <label for="name" class="block mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 mb-4 border rounded-md" required>
+                    <!-- Email Input Field -->
+                    <label for="email" class="block mb-2">Email ID:</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border rounded-md" required>
+                    <!-- Contact Number Input Field -->
+                    <label for="contact" class="block mb-2">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" class="w-full px-4 py-2 mb-4 border rounded-md" required>
+                    <!-- Optional Phone Number Input Field -->
+                    <label for="rates" class="block mb-2">Give Rating Between {1-5}</label>
+                    <input type="number" id="rates" name="rate" class="w-full px-4 py-2 mb-4 border rounded-md">
+                </div>
+                <div class="feed">
+                    <h2 class="text-xl font-semibold mb-4">Share your experience</h2>
+                    <ul>
+                        <li class="mb-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">How would you rate your overall experience?</h3>
+                                <input type="radio" id="contactChoice1" name="experience" value="Very Good" class="mr-2">
+                                <label for="contactChoice1">Very Good</label>
+                                <input type="radio" id="contactChoice2" name="experience" value="Good" class="mr-2">
+                                <label for="contactChoice2">Good</label>
+                                <input type="radio" id="contactChoice3" name="experience" value="Poor" class="mr-2">
+                                <label for="contactChoice3">Poor</label>
+                                <input type="radio" id="contactChoice4" name="experience" value="Very Poor" class="mr-2">
+                                <label for="contactChoice4">Very poor</label>
+                            </div>
+                        </li>
+                        <li class="mb-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">How would you rate our highlighting feature ?</h3>
+                                <input type="radio" id="contactChoice5" name="highlighting" value="Very Good" class="mr-2">
+                                <label for="contactChoice5">Very Good</label>
+                                <input type="radio" id="contactChoice6" name="highlighting" value="Good" class="mr-2">
+                                <label for="contactChoice6">Good</label>
+                                <input type="radio" id="contactChoice7" name="highlighting" value="Poor" class="mr-2">
+                                <label for="contactChoice7">Poor</label>
+                                <input type="radio" id="contactChoice8" name="highlighting" value="Very Poor" class="mr-2">
+                                <label for="contactChoice8">Very poor</label>
+                            </div>
+                        </li>
+                        <li class="mb-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">How would you rate the summarizer function ?</h3>
+                                <input type="radio" id="contactChoice9" name="summarizer" value="Very Good" class="mr-2">
+                                <label for="contactChoice9">Very Good</label>
+                                <input type="radio" id="contactChoice10" name="summarizer" value="Good" class="mr-2">
+                                <label for="contactChoice10">Good</label>
+                                <input type="radio" id="contactChoice11" name="summarizer" value="Poor" class="mr-2">
+                                <label for="contactChoice11">Poor</label>
+                                <input type="radio" id="contactChoice12" name="summarizer" value="Very Poor" class="mr-2">
+                                <label for="contactChoice12">Very poor</label>
+                            </div>
+                        </li>
+                        <li class="mb-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">How would you rate the Ad-blocker function ?</h3>
+                                <input type="radio" id="contactChoice13" name="adBlocker" value="Very Good" class="mr-2">
+                                <label for="contactChoice13">Very Good</label>
+                                <input type="radio" id="contactChoice14" name="adBlocker" value="Good" class="mr-2">
+                                <label for="contactChoice14">Good</label>
+                                <input type="radio" id="contactChoice15" name="adBlocker" value="Poor" class="mr-2">
+                                <label for="contactChoice15">Poor</label>
+                                <input type="radio" id="contactChoice16" name="adBlocker" value="Very Poor" class="mr-2">
+                                <label for="contactChoice16">Very poor</label>
+                            </div>
+                        </li>
+                        <li class="mb-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">How would you rate the Reporting function ?</h3>
+                                <input type="radio" id="contactChoice17" name="reporting" value="Very Good" class="mr-2">
+                                <label for="contactChoice17">Very Good</label>
+                                <input type="radio" id="contactChoice18" name="reporting" value="Good" class="mr-2">
+                                <label for="contactChoice18">Good</label>
+                                <input type="radio" id="contactChoice19" name="reporting" value="Poor" class="mr-2">
+                                <label for="contactChoice19">Poor</label>
+                                <input type="radio" id="contactChoice20" name="reporting" value="Very Poor" class="mr-2">
+                                <label for="contactChoice20">Very poor</label>
+                            </div>
+                        </li>
+                        <!-- Repeat for other sections -->
+                    </ul>
+                </div>
+            </div>
+            <div class="query">
+                <label for="query" class="block mb-2">Any Query or Suggestion?</label>
+                <textarea id="query" name="textarea" value="textarea" rows="4" class="w-full px-4 py-2 mb-4 border border-gray-700 rounded-md">Write Your Query ?</textarea>
+
+            </div>
+            <button type="submit" class="btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">Submit</button>
+        </form>
+    </section>
+    <footer class="bg-purple-900 text-white text-center py-4  bottom-0 w-full">
+        <p>© 2024 Dark Patterns Detector. All rights reserved</p>
+    </footer>
+    
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        });
+
+        document.getElementById('close-sidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
